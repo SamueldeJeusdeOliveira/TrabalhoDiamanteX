@@ -5,11 +5,11 @@
         // Menu para o usuário
         static void Main(string[] args)
         {
+            int n = 0;
             Console.WriteLine('\n' + "Bem-Vindo ao nosso gerador de diamantes!" + '\n');
             Console.WriteLine("------------------------------------------------------" + '\n');
             Console.WriteLine("Primeiramente para calcularmos e gerarmos um diamante precisaremos de um número ímpar inteiro!");
             Console.Write("Por isso digite um número ímpar inteiro por favor(EXEMPLO: 1,3,5,7): ");
-            int n = int.Parse(Console.ReadLine());
             n = VerificaImpar(n);
             Console.WriteLine("------------------------------------------------------" + '\n');
             Console.WriteLine("Diamante gerado:" + '\n');
@@ -36,10 +36,28 @@
         //Função para verificar se o número é ímpar
         static int VerificaImpar(int n)
         {
-            while (n % 2 == 0)
+            bool valido = false;
+
+            while (!valido)
             {
-                Console.WriteLine("Número inválido! Tente novamente com um número ímpar:");
-                n = int.Parse(Console.ReadLine());
+                string entrada = Console.ReadLine();
+
+                if (int.TryParse(entrada, out n))
+                {
+                    if (n % 2 != 0)
+                    {
+                        Console.WriteLine("Número válido");
+                        valido = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Número inválido! Tente novamente com um número ímpar:");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Entrada inválida! Por favor, digite um número inteiro:");
+                }
             }
             return n;
         }
