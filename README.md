@@ -1,10 +1,10 @@
 # TrabalhoDiamanteX
-Programa em terminal, onde o sistema deve ler um número ímpar inserido pelo usuário e imprimir um diamante com 'X'. O diamante deve ter o número de linhas igual ao número inserido pelo usuário.
+Programa em terminal, onde o sistema deve ler um nÃºmero Ã­mpar inserido pelo usuÃ¡rio e imprimir um diamante com 'X'. O diamante deve ter o nÃºmero de linhas igual ao nÃºmero inserido pelo usuÃ¡rio.
 
 # Funcionalidades
-- O programa deve solicitar ao usuário um número ímpar.
-- O programa deve validar se o número inserido é ímpar e maior que 0.
-- O programa valida se o número inserido é um número inteiro.
-- O diamante deve ter o número de linhas igual ao número inserido pelo usuário.
-- O diamante deve ser simétrico.
-- O diamante deve ser impresso com 'X' e espaços em branco.
+- O programa deve solicitar ao usuÃ¡rio um nÃºmero Ã­mpar.
+- O programa deve validar se o nÃºmero inserido Ã© Ã­mpar e maior que 0.
+- O programa valida se o nÃºmero inserido Ã© um nÃºmero inteiro.
+- O diamante deve ter o nÃºmero de linhas igual ao nÃºmero inserido pelo usuÃ¡rio.
+- O diamante deve ser simÃ©trico.
+- O diamante deve ser impresso com 'X' e espaÃ§os em branco.
