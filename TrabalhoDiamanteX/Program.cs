@@ -5,19 +5,23 @@
         // Menu para o usuário
         static void Main(string[] args)
         {
-            int n = 0;
-            Console.WriteLine('\n' + "Bem-Vindo ao nosso gerador de diamantes!" + '\n');
-            Console.WriteLine("------------------------------------------------------" + '\n');
+            Console.ForegroundColor = ConsoleColor.White;
+            int numeroDeLinhasEColunas = 0;
+            Console.BackgroundColor = ConsoleColor.DarkBlue;
+            Console.WriteLine("-------------------------------------------- GERADOR DE DIAMANTES ------------------------------------------------------");
+            Console.WriteLine('\n' + "                                   Bem-Vindo ao nosso gerador de diamantes!                                             " + '\n');
+            Console.ResetColor();
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------" + '\n');
             Console.WriteLine("Primeiramente para calcularmos e gerarmos um diamante precisaremos de um número ímpar inteiro!");
             Console.Write("Por isso digite um número ímpar inteiro por favor(EXEMPLO: 1,3,5,7): ");
-            n = VerificaImpar(n);
-            Console.WriteLine("------------------------------------------------------" + '\n');
+            numeroDeLinhasEColunas = VerificaImpar(numeroDeLinhasEColunas);
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------" + '\n');
             Console.WriteLine("Diamante gerado:" + '\n');
-            GerarDiamante(n);
+            GerarDiamante(numeroDeLinhasEColunas);
             Console.BackgroundColor = ConsoleColor.DarkBlue;
-            Console.WriteLine($"\nDIAMANTE {n} X {n}\n");
+            Console.WriteLine($"\nDIAMANTE {numeroDeLinhasEColunas} X {numeroDeLinhasEColunas}\n");
             Console.ResetColor();
-            Console.WriteLine("------------------------------------------------------" + '\n');
+            Console.WriteLine("-------------------------------------------------------------------------------------------------------" + '\n');
             Console.WriteLine("Gostaria de gerar outro diamante?(S/N)");
             string resposta = Console.ReadLine().ToUpper();
             if (resposta == "S")
@@ -27,13 +31,17 @@
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.White;
+                Console.BackgroundColor = ConsoleColor.DarkRed;
                 Console.WriteLine("Obrigado por usar nosso gerador de diamantes!");
                 Console.WriteLine("Até a próxima!");
+                Console.WriteLine();
+                Console.ResetColor();
             }
 
         }
 
-        //Função para verificar se o número é ímpar
+        //Função para verificar se o número é ímpar e se é inteiro
         static int VerificaImpar(int n)
         {
             bool valido = false;
@@ -46,17 +54,26 @@
                 {
                     if (n % 2 != 0)
                     {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.DarkGreen;
                         Console.WriteLine("Número válido");
                         valido = true;
+                        Console.ResetColor();
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.White;
+                        Console.BackgroundColor = ConsoleColor.Red;
                         Console.WriteLine("Número inválido! Tente novamente com um número ímpar:");
+                        Console.ResetColor();
                     }
                 }
                 else
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.BackgroundColor = ConsoleColor.Red;
                     Console.WriteLine("Entrada inválida! Por favor, digite um número inteiro:");
+                    Console.ResetColor();
                 }
             }
             return n;
