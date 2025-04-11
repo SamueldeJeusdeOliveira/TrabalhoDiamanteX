@@ -11,17 +11,17 @@
             Console.WriteLine("-------------------------------------------- GERADOR DE DIAMANTES ------------------------------------------------------");
             Console.WriteLine('\n' + "                                   Bem-Vindo ao nosso gerador de diamantes!                                             " + '\n');
             Console.ResetColor();
-            Console.WriteLine("-------------------------------------------------------------------------------------------------------" + '\n');
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" + '\n');
             Console.WriteLine("Primeiramente para calcularmos e gerarmos um diamante precisaremos de um número ímpar inteiro!");
             Console.Write("Por isso digite um número ímpar inteiro por favor(EXEMPLO: 1,3,5,7): ");
             numeroDeLinhasEColunas = VerificaImpar(numeroDeLinhasEColunas);
-            Console.WriteLine("-------------------------------------------------------------------------------------------------------" + '\n');
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" + '\n');
             Console.WriteLine("Diamante gerado:" + '\n');
             GerarDiamante(numeroDeLinhasEColunas);
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.WriteLine($"\nDIAMANTE {numeroDeLinhasEColunas} X {numeroDeLinhasEColunas}\n");
             Console.ResetColor();
-            Console.WriteLine("-------------------------------------------------------------------------------------------------------" + '\n');
+            Console.WriteLine("------------------------------------------------------------------------------------------------------------------------" + '\n');
             Console.WriteLine("Gostaria de gerar outro diamante?(S/N)");
             string resposta = Console.ReadLine().ToUpper();
             if (resposta == "S")
@@ -63,7 +63,7 @@
                     else
                     {
                         Console.ForegroundColor = ConsoleColor.White;
-                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.BackgroundColor = ConsoleColor.DarkRed;
                         Console.WriteLine("Número inválido! Tente novamente com um número ímpar:");
                         Console.ResetColor();
                     }
@@ -71,7 +71,7 @@
                 else
                 {
                     Console.ForegroundColor = ConsoleColor.White;
-                    Console.BackgroundColor = ConsoleColor.Red;
+                    Console.BackgroundColor = ConsoleColor.DarkRed;
                     Console.WriteLine("Entrada inválida! Por favor, digite um número inteiro:");
                     Console.ResetColor();
                 }
